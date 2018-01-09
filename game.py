@@ -1,6 +1,6 @@
 import random
-from classes.magic import Spell
-from classes.inventory import Item
+from magic import Spell
+from inventory import Item
 
 class bcolors:
     HEADER = '\033[95m'
