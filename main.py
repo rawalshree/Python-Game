@@ -14,9 +14,8 @@ quake = Spell("Quake", 25, 130, "Black")
 # create White Magic:
 cure = Spell("Cure", 40, 1000, "White")
 cura = Spell("Cura", 60, 1500, "White")
-#curaga = Spell("Curaga", 90, 4000, "White")
 
-# Create some Items
+# Create some Items to be used
 potion = Item("Potion", "Potion", "Heals 50 Hp", 50, 10)
 hipotion = Item("Hipotion", "Potion", "Heals 100 Hp", 100, 5)
 superpotion = Item("Superpotion", "Potion", "Heals 500 Hp", 500, 5)
@@ -24,23 +23,29 @@ elixir = Item("Elixir", "Elixir", "Fully restores HP/MP of one party member", 99
 superelixir = Item("Superelixir", "Elixir", "Fully restores Party's HP/MP", 9999, 2)
 grenade = Item("Grenade", "Attack", "Deals 500 damage", 500, 3)
 
-
+# Adding magic spells for the player
 player_magic = [fire, thunder, blizzard, meteor, quake, cure, cura]
+
+# Adding magic spells for the enemy
 enemy_magic = [fire, thunder, blizzard, cure]
 
+# Instantiating the items and their quantity
 player_items = [{"item": potion, "quantity": 10},
                 {"item": hipotion, "quantity": 5},
                 {"item": superpotion, "quantity": 5},
                 {"item": elixir, "quantity": 5},
                 {"item": superelixir, "quantity": 2},
                 {"item": grenade, "quantity": 5}]
+
+# Instantiate the items for enemy
 enemy_items = [{"item": grenade, "quantity": 5}]
 
-# Instantiate People
+# Instantiate the players
 player1 = Person("Shree", 3000, 300, 200, 34, player_magic, player_items)
 player2 = Person("Rawal", 2500, 200, 150, 34, player_magic, player_items)
 player3 = Person("Flash", 1200, 150, 100, 34, player_magic, player_items)
 
+# Instantiate the Enemies
 enemy2 = Person("De-voe", 1400, 200, 700, 300, enemy_magic, enemy_items)
 enemy1 = Person("Savtar", 9000, 500, 550, 30, enemy_magic, enemy_items)
 enemy3 = Person("Thorne", 1400, 200, 700, 300, enemy_magic, enemy_items)
